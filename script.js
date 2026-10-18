@@ -63,11 +63,13 @@
   // ---------- Hero: engrenagens da logo, giráveis com o dedo ou o mouse ----------
   const gearsSvg = $('.gears-svg');
   const gears = (() => {
-    const BC = [684, 194];
+    const BC = [683.4, 193.6];
     const SC = [487.5, 275.3];
     const big = $('.g-big', gearsSvg);
     const small = $('.g-small', gearsSvg);
     const clipBig = $('.clip-big', gearsSvg);
+    const clipBig2 = $('.clip-big2', gearsSvg);
+    const outline = $('.g-outline', gearsSvg);
     const clipSmall = $('.clip-small', gearsSvg);
     const ripples = $('.g-ripples', gearsSvg);
     const readout = $('.readout-deg');
@@ -76,13 +78,26 @@
     let last = 0;
     let running = false;
     let drag = null;
+    let settle = 0;
+    // O traçado branco só existe com as engrenagens paradas: some ao mover e volta a desenhar ao assentar
+    const setStatic = (on) => gearsSvg.classList.toggle('is-static', on);
+    const scheduleStatic = (delay = 650) => {
+      clearTimeout(settle);
+      settle = setTimeout(() => setStatic(true), delay);
+    };
+    const moving = () => {
+      clearTimeout(settle);
+      setStatic(false);
+    };
 
     const render = () => {
       const tb = `rotate(${angle.toFixed(2)} ${BC[0]} ${BC[1]})`;
       const ts = `rotate(${((-angle * 4) / 3).toFixed(2)} ${SC[0]} ${SC[1]})`; // 12 dentes x 9 dentes
       big.setAttribute('transform', tb);
       clipBig.setAttribute('transform', tb);
+      clipBig2.setAttribute('transform', tb);
       small.setAttribute('transform', ts);
+      outline.setAttribute('transform', ts);
       clipSmall.setAttribute('transform', ts);
       readout.textContent = `${String(Math.round(((angle % 360) + 360) % 360)).padStart(3, '0')}°`;
     };
@@ -99,9 +114,11 @@
       } else {
         vel = 0;
         running = false;
+        scheduleStatic();
       }
     };
     const run = () => {
+      moving();
       if (running) return;
       running = true;
       last = performance.now();
@@ -175,7 +192,8 @@
     gearsSvg.addEventListener('pointerup', release);
     gearsSvg.addEventListener('pointercancel', release);
     render();
-    return { kick };
+    scheduleStatic(reduced() ? 0 : 2600);
+    return { kick, setStatic, moving };
   })();
 
   // ---------- Abertura ----------
@@ -195,14 +213,15 @@
     const svg = $('.intro-logo', intro);
     const big = $('#i-big', svg);
     const small = $('#i-small', svg);
+    const outline = $('.i-outline', svg);
     const letters = $$('.i-letter', svg);
     const me = $('.i-me', svg);
     const shine = $('.i-shine', svg);
     const glow = $('.i-glow', svg);
-    const BC = [684, 194];
+    const BC = [683.4, 193.6];
     const SC = [487.5, 275.3];
     const MEC = [1115, 527];
-    const EXIT = 3250;
+    const EXIT = 4000;
     // As engrenagens partem de fora dos cantos opostos da tela
     const b0 = toUser(svg, 1.2 * innerWidth, -0.2 * innerHeight);
     const s0 = toUser(svg, -0.2 * innerWidth, 1.2 * innerHeight);
@@ -239,8 +258,10 @@
       const ms = 1 + 0.3 * (1 - em);
       me.setAttribute('transform', `translate(${((1 - em) * 150).toFixed(2)} 0) translate(${MEC[0]} ${MEC[1]}) scale(${ms.toFixed(4)}) translate(${-MEC[0]} ${-MEC[1]})`);
       me.setAttribute('opacity', Math.min(1, pm * 2.2).toFixed(3));
-      shine.setAttribute('transform', `translate(${(-420 + ease.inOut(progress(t, 2420, 860)) * 2050).toFixed(1)} 0) skewX(-18)`);
-      glow.setAttribute('opacity', (Math.sin(Math.PI * progress(t, 2300, 1100)) * 0.85).toFixed(3));
+      shine.setAttribute('transform', `translate(${(-420 + ease.inOut(progress(t, 2300, 800)) * 2400).toFixed(1)} 0) skewX(-18)`);
+      glow.setAttribute('opacity', (Math.sin(Math.PI * progress(t, 2200, 1000)) * 0.85).toFixed(3));
+      // com a logo parada (depois do brilho), o traçado branco desenha o contorno que separa as camadas
+      outline.setAttribute('stroke-dashoffset', (1 - ease.inOut(progress(t, 3100, 800))).toFixed(4));
       if (t >= EXIT) {
         leave();
         return;
@@ -581,7 +602,7 @@
 
     if (motion && contactRect.bottom > 0 && contactRect.top < vh) {
       const a = (vh - contactRect.top) * 0.12;
-      cgBig.setAttribute('transform', `rotate(${a.toFixed(2)} 684 194)`);
+      cgBig.setAttribute('transform', `rotate(${a.toFixed(2)} 683.4 193.6)`);
       cgSmall.setAttribute('transform', `rotate(${((-a * 4) / 3).toFixed(2)} 487.5 275.3)`);
     }
   };
