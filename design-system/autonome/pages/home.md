@@ -1,54 +1,48 @@
-# Home — overrides do MASTER
+# Home — overrides do MASTER (v2)
 
 > Estas regras substituem o `MASTER.md` na página `index.html`. O que não está aqui segue o MASTER.
 
-## Estilo (substitui "Liquid Glass")
+## Direção
 
-O MASTER sugeriu *Liquid Glass*, pensado para interfaces da Apple e fora do contexto de um
-estúdio de sites. Adotamos **editorial minimalista (Minimalism & Swiss)** com direção de arte
-própria: composição assimétrica, hairlines no lugar de caixas, placas grafite como "pranchas"
-de figura (cantos de corte, legenda "Fig. 0X") e geometria derivada das engrenagens da logo.
+Site enxuto: quem somos, o que fazemos, como fazemos, por que nós, contato. Frases curtas,
+sem jargão genérico e sem nada que soe como "estamos começando". Moderno, com peças
+estruturais que respondem ao toque.
 
 ## Cores (substitui preto + #A16207)
 
-Extraídas da logo vetorizada (grafite #3D4144 e champagne #C1AB7C) e da direção do briefing.
-
 | Token | Valor | Uso |
 |-------|-------|-----|
-| `--ink` | #292C30 | fundos escuros, títulos, botão principal |
-| `--ink-deep` | #1F2226 | rodapé |
-| `--graphite` | #3D4144 | texto corrido (9.5:1 no marfim), grafite da logo |
-| `--champagne` | #C1AB7C | assinatura: detalhes, ícones, linhas, botão do CTA final (6.3:1 com `--ink`) |
-| `--champagne-soft` | #D9CBA6 | hover sobre escuro |
-| `--champagne-ink` | #725E32 | champagne para texto sobre fundo claro (≥ 4.5:1) |
-| `--ivory` | #F7F5F0 | fundo principal |
-| `--stone` | #E7E3DA | seções alternadas (serviços, projetos) |
-| `--muted` / `--muted-on-dark` | #5F605A / #A9A79F | texto secundário (≥ 4.9:1) |
-| `--support` | #777771 | só linhas e elementos decorativos (não passa 4.5:1 como texto) |
+| `--bg` | #E7E6E3 | fundo cinza esfumaçado (com manchas suaves e granulação) |
+| `--ink` | #0D0D0F | preto vivo: painéis escuros, títulos, botões |
+| `--gold` | #D8AC2B | dourado vivo: marca-texto, preenchimentos, dentes, painel de contato |
+| `--gold-hi` / `--gold-lo` | #F2D06B / #B0841A | brilho e sombra do dourado metálico |
+| `--gold-ink` | #7A5A06 | dourado para texto sobre fundo claro (≥ 4.5:1) |
+| `--text` / `--muted` | #1C1C1F / #55554F | texto (≥ 6:1 no fundo) |
+| `--on-dark` / `--muted-dark` | #F3F2EF / #A3A29C | texto sobre preto |
 
-Ritmo de fundos: marfim → marfim → pedra → **grafite** → marfim → pedra → **grafite** → marfim → grafite profundo.
+A logo mantém o desenho original; só as cores ficaram mais vivas (preto #141416 e dourado
+em gradiente #F2D06B → #D8AC2B → #B0841A).
 
-## Tipografia (substitui Cormorant)
+## Tipografia (substitui Cormorant + Montserrat)
 
-- **Sorts Mill Goudy** (títulos, 400 e itálico): é a serifa do Google Fonts mais próxima do
-  "autono" da logo. Nunca usar negrito (a família não tem; `font-synthesis: none`).
-- **Montserrat** (texto, navegação, rótulos): ecoa o "ME" geométrico da logo.
-- Palavra de destaque dos títulos em itálico champagne (`--champagne-ink` no claro).
+- **Syne** 700–800 nos títulos: geométrica e larga, conversa com o "ME" da logo.
+- **Geist** no texto e **Geist Mono** em rótulos e números.
 
-## Componentes próprios da página
+## Componentes próprios
 
-- **Fig. 01 — Anatomia de um site** (hero): SVG isométrico com 4 camadas (domínio, estrutura,
-  identidade, conteúdo). Monta ao carregar, se separa com o cursor e se comprime ao rolar.
-- **Fig. 02 — Funcionamento integrado** (quem somos): três engrenagens com engrenamento correto
-  (12, 9 e 15 dentes) que giram acopladas à rolagem.
-- **Placa de serviços**: lista à direita e placa fixa à esquerda que troca a ilustração (traços
-  desenhados com `pathLength`). No celular, cada serviço mostra a própria ilustração.
-- **Cremalheira e pinhão** (processo): o pinhão é a engrenagem pequena da logo, sem alterações,
-  rolando sem deslizar (rotação = distância ÷ raio primitivo).
-- **Painéis escuros** expandem (clip-path) ao entrar na tela.
+- **Abertura**: engrenagens da logo entram pelos cantos opostos girando acopladas
+  (12 × 9 dentes), "autono" sobe letra a letra, "ME" entra em dourado, um brilho passa
+  pela logo e ela voa até o cabeçalho. Uma vez por sessão; qualquer gesto adianta.
+- **Engrenagens do hero**: giráveis com dedo ou mouse, com inércia; a rolagem também
+  dá impulso. Luz fixa sobre o metal (o reflexo não gira junto).
+- **Mapa hexagonal da capital** (5 regiões): toque em um hexágono ou nos botões; a
+  região acende em onda a partir do ponto tocado.
+- **Cremalheira e pinhão** (como fazemos): o pinhão é a engrenagem pequena da logo; é
+  um `role="slider"` arrastável, com mola, que encaixa na etapa mais próxima.
+- **Cards com dentes de cremalheira** que deslizam no hover; luz que segue o cursor.
 
 ## Regras
 
-- Engrenagens nunca giram sozinhas: só acompanham a rolagem.
-- Com `prefers-reduced-motion`, tudo aparece no estado final (camadas abertas, etapas concluídas).
-- Projetos de exemplo são sempre rotulados "Conceito demonstrativo".
+- Engrenagens só giram por abertura, toque ou rolagem — nunca sozinhas em loop.
+- Movimento reduzido: sem abertura, sem inércia nem molas, tudo no estado final.
+- Toda interação tem alternativa por teclado (botões de região, slider do pinhão, etapas).

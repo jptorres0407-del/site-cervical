@@ -1,14 +1,22 @@
 {
   "name": "autonoME",
   "short_name": "autonoME",
-  "description": "Sites profissionais e personalizados para pequenos negócios.",
+  "description": "Sites sob medida, com domínio próprio, para empresas em crescimento em São Paulo.",
   "lang": "pt-BR",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#F7F5F0",
-  "theme_color": "#F7F5F0",
+  "background_color": "#E7E6E3",
+  "theme_color": "#E7E6E3",
   "icons": [
-    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
