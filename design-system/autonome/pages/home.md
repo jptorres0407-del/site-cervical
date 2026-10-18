@@ -46,3 +46,6 @@ em gradiente #F2D06B → #D8AC2B → #B0841A).
 - Engrenagens só giram por abertura, toque ou rolagem — nunca sozinhas em loop.
 - Movimento reduzido: sem abertura, sem inércia nem molas, tudo no estado final.
 - Toda interação tem alternativa por teclado (botões de região, slider do pinhão, etapas).
+- Encaixe das engrenagens: a dourada é inteira, mas sempre recortada pelo contorno da preta
+  com folga (máscara que acompanha o giro, inclusive o furo da preta). O dourado nunca
+  passa por cima nem por dentro da engrenagem preta. Não há traçado branco.

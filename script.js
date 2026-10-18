@@ -68,8 +68,7 @@
     const big = $('.g-big', gearsSvg);
     const small = $('.g-small', gearsSvg);
     const clipBig = $('.clip-big', gearsSvg);
-    const clipBig2 = $('.clip-big2', gearsSvg);
-    const outline = $('.g-outline', gearsSvg);
+    const maskSmall = $('.mask-small', gearsSvg);
     const clipSmall = $('.clip-small', gearsSvg);
     const ripples = $('.g-ripples', gearsSvg);
     const readout = $('.readout-deg');
@@ -78,26 +77,14 @@
     let last = 0;
     let running = false;
     let drag = null;
-    let settle = 0;
-    // O traçado branco só existe com as engrenagens paradas: some ao mover e volta a desenhar ao assentar
-    const setStatic = (on) => gearsSvg.classList.toggle('is-static', on);
-    const scheduleStatic = (delay = 650) => {
-      clearTimeout(settle);
-      settle = setTimeout(() => setStatic(true), delay);
-    };
-    const moving = () => {
-      clearTimeout(settle);
-      setStatic(false);
-    };
 
     const render = () => {
       const tb = `rotate(${angle.toFixed(2)} ${BC[0]} ${BC[1]})`;
       const ts = `rotate(${((-angle * 4) / 3).toFixed(2)} ${SC[0]} ${SC[1]})`; // 12 dentes x 9 dentes
       big.setAttribute('transform', tb);
       clipBig.setAttribute('transform', tb);
-      clipBig2.setAttribute('transform', tb);
       small.setAttribute('transform', ts);
-      outline.setAttribute('transform', ts);
+      maskSmall.setAttribute('transform', ts); // o dourado é recortado pelo contorno da preta, com folga
       clipSmall.setAttribute('transform', ts);
       readout.textContent = `${String(Math.round(((angle % 360) + 360) % 360)).padStart(3, '0')}°`;
     };
@@ -114,11 +101,9 @@
       } else {
         vel = 0;
         running = false;
-        scheduleStatic();
       }
     };
     const run = () => {
-      moving();
       if (running) return;
       running = true;
       last = performance.now();
@@ -192,8 +177,7 @@
     gearsSvg.addEventListener('pointerup', release);
     gearsSvg.addEventListener('pointercancel', release);
     render();
-    scheduleStatic(reduced() ? 0 : 2600);
-    return { kick, setStatic, moving };
+    return { kick };
   })();
 
   // ---------- Abertura ----------
@@ -213,7 +197,7 @@
     const svg = $('.intro-logo', intro);
     const big = $('#i-big', svg);
     const small = $('#i-small', svg);
-    const outline = $('.i-outline', svg);
+    const maskSmall = $('.i-mask-small', svg);
     const letters = $$('.i-letter', svg);
     const me = $('.i-me', svg);
     const shine = $('.i-shine', svg);
@@ -221,7 +205,7 @@
     const BC = [683.4, 193.6];
     const SC = [487.5, 275.3];
     const MEC = [1115, 527];
-    const EXIT = 4000;
+    const EXIT = 3500;
     // As engrenagens partem de fora dos cantos opostos da tela
     const b0 = toUser(svg, 1.2 * innerWidth, -0.2 * innerHeight);
     const s0 = toUser(svg, -0.2 * innerWidth, 1.2 * innerHeight);
@@ -248,6 +232,8 @@
       const fly = progress(t, 60, 1500);
       place(big, bOff, BC, fly, spin, 0.22);
       place(small, sOff, SC, fly, (-spin * 4) / 3, -0.22);
+      maskSmall.setAttribute('transform', small.getAttribute('transform'));
+      maskSmall.setAttribute('opacity', fly > 0 ? '1' : '0');
       letters.forEach((el, i) => {
         const p = progress(t, 1300 + i * 70, 950);
         el.setAttribute('transform', `translate(0 ${((1 - ease.expoOut(p)) * 170).toFixed(2)})`);
@@ -260,8 +246,6 @@
       me.setAttribute('opacity', Math.min(1, pm * 2.2).toFixed(3));
       shine.setAttribute('transform', `translate(${(-420 + ease.inOut(progress(t, 2300, 800)) * 2400).toFixed(1)} 0) skewX(-18)`);
       glow.setAttribute('opacity', (Math.sin(Math.PI * progress(t, 2200, 1000)) * 0.85).toFixed(3));
-      // com a logo parada (depois do brilho), o traçado branco desenha o contorno que separa as camadas
-      outline.setAttribute('stroke-dashoffset', (1 - ease.inOut(progress(t, 3100, 800))).toFixed(4));
       if (t >= EXIT) {
         leave();
         return;
@@ -574,6 +558,7 @@
   const contact = $('.contact');
   const cgBig = $('.cg-big', contact);
   const cgSmall = $('.cg-small', contact);
+  const cgMask = $('.cg-mask-small', contact);
 
   // ---------- Laço de rolagem: lê tudo primeiro, escreve depois ----------
   let lastY = scrollY;
@@ -603,7 +588,9 @@
     if (motion && contactRect.bottom > 0 && contactRect.top < vh) {
       const a = (vh - contactRect.top) * 0.12;
       cgBig.setAttribute('transform', `rotate(${a.toFixed(2)} 683.4 193.6)`);
-      cgSmall.setAttribute('transform', `rotate(${((-a * 4) / 3).toFixed(2)} 487.5 275.3)`);
+      const rs = `rotate(${((-a * 4) / 3).toFixed(2)} 487.5 275.3)`;
+      cgSmall.setAttribute('transform', rs);
+      cgMask.setAttribute('transform', rs);
     }
   };
   const requestUpdate = () => {
