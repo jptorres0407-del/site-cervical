@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>autonoME — Sites profissionais e personalizados para pequenos negócios</title>
+  <meta name="description" content="A autonoME cria sites profissionais e personalizados, com domínio próprio, para pequenas empresas, comércios, lojas e prestadores de serviços. Solicite um orçamento.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F7F5F0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <!-- DOMÍNIO: endereço provisório. Rode tools/set_domain.py para aplicar o domínio definitivo (veja README). -->
+  <link rel="canonical" href="https://autonome.example/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="autonoME">
+  <meta property="og:title" content="autonoME — Uma presença digital à altura do seu negócio">
+  <meta property="og:description" content="Sites profissionais e personalizados para pequenas empresas, comércios, lojas e prestadores de serviços.">
+  <meta property="og:url" content="https://autonome.example/">
+  <meta property="og:image" content="https://autonome.example/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo da autonoME sobre fundo grafite com a frase: Pequenos negócios. Uma presença digital à altura.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..700&family=Sorts+Mill+Goudy:ital@0;1&display=swap">
+  <link rel="stylesheet" href="motion.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "autonoME",
+    "url": "https://autonome.example/",
+    "logo": "https://autonome.example/assets/logo-512.png",
+    "email": "getyourautonome@gmail.com",
+    "description": "Criação de sites profissionais e personalizados, com domínio próprio, para pequenas empresas, comércios, lojas e prestadores de serviços."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-hide-on-scroll>
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="autonoME — início">
+        <img src="assets/logo.svg" alt="autonoME" width="110" height="53">
+      </a>
+      <nav class="nav" aria-label="Principal" data-scrollspy>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#processo">Nosso processo</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--sm header-cta" href="mailto:getyourautonome@gmail.com" data-contact>
+        <span class="btn-label">Solicitar um orçamento</span>
+        <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="page-progress" data-page-progress aria-hidden="true"></div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav class="container menu-inner" aria-label="Menu">
+      <ol class="menu-list">
+        <li><a href="#inicio"><span class="menu-num">01</span>Início</a></li>
+        <li><a href="#servicos"><span class="menu-num">02</span>Serviços</a></li>
+        <li><a href="#diferenciais"><span class="menu-num">03</span>Diferenciais</a></li>
+        <li><a href="#processo"><span class="menu-num">04</span>Nosso processo</a></li>
+        <li><a href="#faq"><span class="menu-num">05</span>Perguntas frequentes</a></li>
+      </ol>
+      <div class="menu-foot">
+        <a class="btn" href="mailto:getyourautonome@gmail.com" data-contact>
+          <span class="btn-label">Solicitar um orçamento</span>
+          <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+        <a class="menu-mail" href="mailto:getyourautonome@gmail.com">getyourautonome@gmail.com</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-light" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal><span class="eyebrow-rule" aria-hidden="true"></span>Sites profissionais e personalizados</p>
+          <h1 class="hero-title" id="hero-title" data-split>
+            <span class="line">Pequenos negócios.</span>
+            <span class="line">Uma presença digital</span>
+            <span class="line line--offset"><span class="title-rule" aria-hidden="true"></span><em>à altura.</em></span>
+          </h1>
+          <div class="hero-bottom" data-stagger>
+            <p class="hero-lead" data-reveal>Criamos sites profissionais e personalizados que apresentam sua empresa com clareza, fortalecem sua credibilidade e ajudam seu negócio a crescer no ambiente digital.</p>
+            <div class="hero-actions" data-reveal>
+              <a class="btn btn--lg" href="mailto:getyourautonome@gmail.com" data-contact data-magnetic="0.18">
+                <span class="btn-label">Quero criar meu site</span>
+                <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+              </a>
+              <a class="link-arrow" href="#servicos">Conheça nossos serviços<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero-art" data-reveal="fade">
+          <div class="plate plate--hero" data-spotlight>
+            <span class="plate-corner plate-corner--tl" aria-hidden="true"></span>
+            <span class="plate-corner plate-corner--br" aria-hidden="true"></span>
+            <svg class="anatomy" viewBox="0 0 660 630" role="img" aria-labelledby="anatomy-title"><title id="anatomy-title">Ilustração: as camadas de um site — domínio, estrutura, identidade visual e conteúdo — se encaixando.</title><defs><radialGradient id="fig-shadow"><stop offset="0" stop-color="#000" stop-opacity=".38"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs><ellipse class="fig-shadow" cx="255" cy="486" rx="262" ry="104"/><g class="layer layer--0"><polygon fill="#202326" points="475.8,478 293.9,583 293.9,587 475.8,482"/><polygon fill="#1B1D20" points="34.1,433 293.9,583 293.9,587 34.1,437"/><g transform="translate(216 328) matrix(0.8660 0.5 -0.8660 0.5 0 0)">
+      <rect class="pl" width="300" height="210" fill="#34383C" stroke="rgba(193,171,124,.35)"/>
+      <g fill="rgba(241,237,228,.16)"><circle cx="30" cy="70" r="1.2"/><circle cx="30" cy="98" r="1.2"/><circle cx="30" cy="126" r="1.2"/><circle cx="30" cy="154" r="1.2"/><circle cx="30" cy="182" r="1.2"/><circle cx="60" cy="70" r="1.2"/><circle cx="60" cy="98" r="1.2"/><circle cx="60" cy="126" r="1.2"/><circle cx="60" cy="154" r="1.2"/><circle cx="60" cy="182" r="1.2"/><circle cx="90" cy="70" r="1.2"/><circle cx="90" cy="98" r="1.2"/><circle cx="90" cy="126" r="1.2"/><circle cx="90" cy="154" r="1.2"/><circle cx="90" cy="182" r="1.2"/><circle cx="120" cy="70" r="1.2"/><circle cx="120" cy="98" r="1.2"/><circle cx="120" cy="126" r="1.2"/><circle cx="120" cy="154" r="1.2"/><circle cx="120" cy="182" r="1.2"/><circle cx="150" cy="70" r="1.2"/><circle cx="150" cy="98" r="1.2"/><circle cx="150" cy="126" r="1.2"/><circle cx="150" cy="154" r="1.2"/><circle cx="150" cy="182" r="1.2"/><circle cx="180" cy="70" r="1.2"/><circle cx="180" cy="98" r="1.2"/><circle cx="180" cy="126" r="1.2"/><circle cx="180" cy="154" r="1.2"/><circle cx="180" cy="182" r="1.2"/><circle cx="210" cy="70" r="1.2"/><circle cx="210" cy="98" r="1.2"/><circle cx="210" cy="126" r="1.2"/><circle cx="210" cy="154" r="1.2"/><circle cx="210" cy="182" r="1.2"/><circle cx="240" cy="70" r="1.2"/><circle cx="240" cy="98" r="1.2"/><circle cx="240" cy="126" r="1.2"/><circle cx="240" cy="154" r="1.2"/><circle cx="240" cy="182" r="1.2"/><circle cx="270" cy="70" r="1.2"/><circle cx="270" cy="98" r="1.2"/><circle cx="270" cy="126" r="1.2"/><circle cx="270" cy="154" r="1.2"/><circle cx="270" cy="182" r="1.2"/></g>
+      <rect x="18" y="16" width="264" height="30" rx="15" fill="#292C30" stroke="rgba(193,171,124,.6)"/>
+      <path d="M33 33.5v-3a4 4 0 0 1 8 0v3M31 33.5h12v8H31z" fill="none" stroke="#C1AB7C" stroke-width="1.4"/>
+      <text x="52" y="36" class="fig-url">seunegocio.com.br</text>
+      <circle cx="262" cy="31" r="6" fill="#C1AB7C"/>
+      </g><g class="fig-label"><line x1="485.8" y1="478" x2="519.8" y2="478"/><circle cx="485.8" cy="478" r="2.5"/><text x="529.8" y="472" class="fig-num">04</text><text x="529.8" y="492" class="fig-name">Domínio</text></g></g>
+<g class="layer layer--1"><g transform="translate(216 328) matrix(0.8660 0.5 -0.8660 0.5 0 0)">
+      <rect class="pl" width="300" height="210" fill="rgba(241,237,228,.03)" stroke="rgba(241,237,228,.45)" stroke-dasharray="5 5"/>
+      <g stroke="rgba(193,171,124,.22)"><line x1="18" y1="12" x2="18" y2="198"/><line x1="62" y1="12" x2="62" y2="198"/><line x1="106" y1="12" x2="106" y2="198"/><line x1="150" y1="12" x2="150" y2="198"/><line x1="194" y1="12" x2="194" y2="198"/><line x1="238" y1="12" x2="238" y2="198"/><line x1="282" y1="12" x2="282" y2="198"/></g>
+      <g fill="none" stroke="rgba(241,237,228,.5)" stroke-dasharray="3 4">
+        <rect x="18" y="14" width="264" height="20"/><rect x="18" y="46" width="150" height="66"/>
+        <rect x="180" y="46" width="102" height="66"/><rect x="18" y="126" width="80" height="70"/>
+        <rect x="110" y="126" width="80" height="70"/><rect x="202" y="126" width="80" height="70"/>
+      </g>
+      </g><g class="fig-label"><line x1="485.8" y1="478" x2="519.8" y2="478"/><circle cx="485.8" cy="478" r="2.5"/><text x="529.8" y="472" class="fig-num">03</text><text x="529.8" y="492" class="fig-name">Estrutura</text></g></g>
+<g class="layer layer--2"><g transform="translate(216 328) matrix(0.8660 0.5 -0.8660 0.5 0 0)">
+      <rect class="pl" width="300" height="210" fill="rgba(193,171,124,.07)" stroke="rgba(193,171,124,.6)"/>
+      <text x="214" y="98" class="fig-type">Aa</text>
+      <g fill="rgba(241,237,228,.55)"><rect x="216" y="118" width="66" height="6"/><rect x="216" y="131" width="50" height="4"/><rect x="216" y="140" width="58" height="4"/></g>
+      <circle cx="40" cy="160" r="20" fill="#292C30" stroke="#C1AB7C"/>
+      <circle cx="76" cy="160" r="20" fill="#C1AB7C"/>
+      <circle cx="112" cy="160" r="20" fill="#F7F5F0"/>
+      <path d="M146 194C170 140 206 214 284 162" fill="none" stroke="#C1AB7C" stroke-width="1.6"/>
+      <path d="M146 194L160 164M284 162L262 140" stroke="rgba(241,237,228,.5)"/>
+      <g fill="#292C30" stroke="#C1AB7C"><rect x="142" y="190" width="8" height="8"/><rect x="280" y="158" width="8" height="8"/></g>
+      <g fill="#C1AB7C"><circle cx="160" cy="164" r="2.5"/><circle cx="262" cy="140" r="2.5"/></g>
+      </g><g class="fig-label"><line x1="485.8" y1="478" x2="519.8" y2="478"/><circle cx="485.8" cy="478" r="2.5"/><text x="529.8" y="472" class="fig-num">02</text><text x="529.8" y="492" class="fig-name">Identidade</text></g></g>
+<g class="layer layer--3"><polygon fill="#D8D2C4" points="475.8,478 293.9,583 293.9,588 475.8,483"/><polygon fill="#CBC4B4" points="34.1,433 293.9,583 293.9,588 34.1,438"/><g transform="translate(216 328) matrix(0.8660 0.5 -0.8660 0.5 0 0)">
+      <rect class="pl" width="300" height="210" fill="#F7F5F0"/>
+      <circle cx="20" cy="21" r="5" fill="#3D4144"/><circle cx="29" cy="17" r="6.5" fill="#C1AB7C"/>
+      <g fill="#3D4144" opacity=".45"><rect x="150" y="18" width="22" height="4"/><rect x="178" y="18" width="22" height="4"/><rect x="206" y="18" width="22" height="4"/></g>
+      <rect x="240" y="13" width="42" height="14" rx="7" fill="#292C30"/>
+      <rect x="18" y="48" width="132" height="13" fill="#292C30"/>
+      <rect x="18" y="66" width="84" height="13" fill="#292C30"/><rect x="108" y="66" width="44" height="13" fill="#C1AB7C"/>
+      <g fill="#777771" opacity=".6"><rect x="18" y="88" width="140" height="4"/><rect x="18" y="96" width="118" height="4"/></g>
+      <rect x="18" y="108" width="56" height="15" rx="7.5" fill="#292C30"/>
+      <rect x="176" y="44" width="106" height="80" fill="#E7E3DA"/>
+      <circle cx="252" cy="66" r="11" fill="#C1AB7C"/>
+      <path d="M176 124l34-40 22 24 14-14 36 30z" fill="#C9C2B3"/>
+      <g fill="#FFFFFF" stroke="#E2DDD2"><rect x="18" y="140" width="80" height="56"/><rect x="110" y="140" width="80" height="56"/><rect x="202" y="140" width="80" height="56"/></g>
+      <g fill="#3D4144" opacity=".5"><rect x="28" y="176" width="48" height="4"/><rect x="120" y="176" width="48" height="4"/><rect x="212" y="176" width="48" height="4"/></g>
+      <g fill="#C1AB7C"><rect x="28" y="152" width="14" height="14"/><rect x="120" y="152" width="14" height="14"/><rect x="212" y="152" width="14" height="14"/></g>
+      </g><g class="fig-label"><line x1="485.8" y1="478" x2="519.8" y2="478"/><circle cx="485.8" cy="478" r="2.5"/><text x="529.8" y="472" class="fig-num">01</text><text x="529.8" y="492" class="fig-name">Conteúdo</text></g></g></svg>
+          </div>
+          <figcaption class="fig-caption"><span>Fig. 01</span> Anatomia de um site</figcaption>
+          <ol class="anatomy-legend" aria-hidden="true">
+            <li><span>01</span>Conteúdo</li>
+            <li><span>02</span>Identidade</li>
+            <li><span>03</span>Estrutura</li>
+            <li><span>04</span>Domínio</li>
+          </ol>
+        </figure>
+      </div>
+
+      <div class="container hero-foot" data-reveal="fade">
+        <ul class="hero-points">
+          <li>Identidade visual própria</li>
+          <li>Layout para todas as telas</li>
+          <li>Domínio próprio</li>
+        </ul>
+        <a class="scroll-cue" href="#sobre"><span>Role para conhecer</span><span class="scroll-cue-line" aria-hidden="true"></span></a>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section class="section about" id="sobre" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-head">
+          <p class="kicker" data-reveal><span class="kicker-num">01</span>Quem somos</p>
+          <h2 class="display-2" id="about-title" data-split>Sua empresa merece ser <em>bem apresentada.</em></h2>
+          <p class="lead about-lead" data-reveal>A autonoME desenvolve sites personalizados para empresas que desejam construir uma presença digital profissional.</p>
+        </div>
+
+        <div class="about-body">
+          <figure class="mechanism" data-reveal="fade">
+            <svg class="mechanism-svg" viewBox="70 78 380 300" role="img" aria-labelledby="mech-title"><title id="mech-title">Três engrenagens interligadas: planejamento, design e tecnologia funcionando juntos.</title><g class="gear" transform="translate(170 236)"><circle class="gear-pitch" r="54"/><g class="gear-rot" data-ratio="1.0000"><path class="gear-body" fill-rule="evenodd" d="M29.32 -31.11L46.22 -42.8A63 63 0 0 1 52.72 -34.5L37.28 -20.92A42.75 42.75 0 0 1 40.95 -12.28L40.95 -12.28L61.43 -13.96A63 63 0 0 1 62.9 -3.52L42.75 0.52A42.75 42.75 0 0 1 41.6 9.83L41.6 9.83L60.18 18.63A63 63 0 0 1 56.23 28.41L36.76 21.83A42.75 42.75 0 0 1 31.11 29.32L31.11 29.32L42.8 46.22A63 63 0 0 1 34.5 52.72L20.92 37.28A42.75 42.75 0 0 1 12.28 40.95L12.28 40.95L13.96 61.43A63 63 0 0 1 3.52 62.9L-0.52 42.75A42.75 42.75 0 0 1 -9.83 41.6L-9.83 41.6L-18.63 60.18A63 63 0 0 1 -28.41 56.23L-21.83 36.76A42.75 42.75 0 0 1 -29.32 31.11L-29.32 31.11L-46.22 42.8A63 63 0 0 1 -52.72 34.5L-37.28 20.92A42.75 42.75 0 0 1 -40.95 12.28L-40.95 12.28L-61.43 13.96A63 63 0 0 1 -62.9 3.52L-42.75 -0.52A42.75 42.75 0 0 1 -41.6 -9.83L-41.6 -9.83L-60.18 -18.63A63 63 0 0 1 -56.23 -28.41L-36.76 -21.83A42.75 42.75 0 0 1 -31.11 -29.32L-31.11 -29.32L-42.8 -46.22A63 63 0 0 1 -34.5 -52.72L-20.92 -37.28A42.75 42.75 0 0 1 -12.28 -40.95L-12.28 -40.95L-13.96 -61.43A63 63 0 0 1 -3.52 -62.9L0.52 -42.75A42.75 42.75 0 0 1 9.83 -41.6L9.83 -41.6L18.63 -60.18A63 63 0 0 1 28.41 -56.23L21.83 -36.76A42.75 42.75 0 0 1 29.32 -31.11ZM22.7 0A22.7 22.7 0 1 0 -22.7 0A22.7 22.7 0 1 0 22.7 0Z"/></g><path class="gear-axis" d="M-6 0H6M0 -6V6"/><text class="gear-label" x="0" y="96" text-anchor="middle">Planejamento</text></g><g class="gear gear--solid" transform="translate(244.5 177.8)"><circle class="gear-pitch" r="40.5"/><g class="gear-rot" data-ratio="-1.3333"><path class="gear-body" fill-rule="evenodd" d="M-25.43 14.45L-45.08 20.45A49.5 49.5 0 0 1 -48.49 9.95L-29.07 3.26A29.25 29.25 0 0 1 -28.77 -5.28L-28.77 -5.28L-47.68 -13.31A49.5 49.5 0 0 1 -43.54 -23.54L-24.36 -16.19A29.25 29.25 0 0 1 -18.64 -22.54L-18.64 -22.54L-27.97 -40.84A49.5 49.5 0 0 1 -18.22 -46.02L-8.26 -28.06A29.25 29.25 0 0 1 0.2 -29.25L0.2 -29.25L4.83 -49.26A49.5 49.5 0 0 1 15.62 -46.97L11.71 -26.8A29.25 29.25 0 0 1 18.96 -22.27L18.96 -22.27L35.37 -34.63A49.5 49.5 0 0 1 42.16 -25.94L26.2 -13.01A29.25 29.25 0 0 1 28.84 -4.88L28.84 -4.88L49.35 -3.8A49.5 49.5 0 0 1 48.97 7.23L28.43 6.88A29.25 29.25 0 0 1 25.23 14.8L25.23 14.8L40.25 28.82A49.5 49.5 0 0 1 32.86 37.02L17.36 23.54A29.25 29.25 0 0 1 9.81 27.56L9.81 27.56L12.31 47.94A49.5 49.5 0 0 1 1.38 49.48L-1.84 29.19A29.25 29.25 0 0 1 -10.2 27.42L-10.2 27.42L-21.39 44.64A49.5 49.5 0 0 1 -30.75 38.79L-20.17 21.18A29.25 29.25 0 0 1 -25.43 14.45ZM17.8 0A17.8 17.8 0 1 0 -17.8 0A17.8 17.8 0 1 0 17.8 0Z"/></g><path class="gear-axis" d="M-6 0H6M0 -6V6"/><text class="gear-label" x="0" y="-70" text-anchor="middle">Design</text></g><g class="gear" transform="translate(334 238.2)"><circle class="gear-pitch" r="67.5"/><g class="gear-rot" data-ratio="0.8000"><path class="gear-body" fill-rule="evenodd" d="M-46.5 -31.65L-60.81 -46.42A76.5 76.5 0 0 1 -54.06 -54.13L-37.52 -41.91A56.25 56.25 0 0 1 -29.61 -47.83L-29.61 -47.83L-36.67 -67.14A76.5 76.5 0 0 1 -27.37 -71.44L-17.23 -53.55A56.25 56.25 0 0 1 -7.6 -55.73L-7.6 -55.73L-6.19 -76.25A76.5 76.5 0 0 1 4.06 -76.39L6.04 -55.93A56.25 56.25 0 0 1 15.73 -54.01L15.73 -54.01L25.36 -72.17A76.5 76.5 0 0 1 34.78 -68.14L28.26 -48.64A56.25 56.25 0 0 1 36.34 -42.94L36.34 -42.94L52.52 -55.62A76.5 76.5 0 0 1 59.49 -48.1L45.6 -32.94A56.25 56.25 0 0 1 50.66 -24.45L50.66 -24.45L70.61 -29.45A76.5 76.5 0 0 1 73.91 -19.75L55.05 -11.54A56.25 56.25 0 0 1 56.22 -1.73L56.22 -1.73L76.48 1.82A76.5 76.5 0 0 1 75.55 12.02L54.99 11.85A56.25 56.25 0 0 1 52.07 21.29L52.07 21.29L69.13 32.77A76.5 76.5 0 0 1 64.13 41.71L45.41 33.19A56.25 56.25 0 0 1 38.9 40.63L38.9 40.63L49.82 58.05A76.5 76.5 0 0 1 41.62 64.19L27.99 48.79A56.25 56.25 0 0 1 19.02 52.94L19.02 52.94L21.91 73.3A76.5 76.5 0 0 1 11.91 75.57L5.72 55.96A56.25 56.25 0 0 1 -4.16 56.1L-4.16 56.1L-9.8 75.87A76.5 76.5 0 0 1 -19.85 73.88L-17.53 53.45A56.25 56.25 0 0 1 -26.62 49.55L-26.62 49.55L-39.81 65.32A76.5 76.5 0 0 1 -48.18 59.42L-37.76 41.7A56.25 56.25 0 0 1 -44.47 34.44L-44.47 34.44L-62.94 43.48A76.5 76.5 0 0 1 -68.19 34.68L-51.45 22.74A56.25 56.25 0 0 1 -54.64 13.38L-54.64 13.38L-75.18 14.12A76.5 76.5 0 0 1 -76.4 3.95L-56.25 -0.16A56.25 56.25 0 0 1 -55.35 -10L-55.35 -10L-74.43 -17.68A76.5 76.5 0 0 1 -71.4 -27.47L-51.32 -23.02A56.25 56.25 0 0 1 -46.5 -31.65ZM27.5 0A27.5 27.5 0 1 0 -27.5 0A27.5 27.5 0 1 0 27.5 0Z"/></g><path class="gear-axis" d="M-6 0H6M0 -6V6"/><text class="gear-label" x="0" y="108" text-anchor="middle">Tecnologia</text></g></svg>
+            <figcaption class="fig-caption fig-caption--light"><span>Fig. 02</span> Funcionamento integrado</figcaption>
+          </figure>
+          <div class="about-points" data-stagger>
+            <article class="about-point" data-reveal>
+              <h3>Planejamento, design e tecnologia</h3>
+              <p>Unimos as três frentes para transformar as necessidades de cada negócio em uma experiência digital coerente com sua identidade, seus produtos e seus objetivos.</p>
+            </article>
+            <article class="about-point" data-reveal>
+              <h3>Do entendimento à entrega</h3>
+              <p>Nosso trabalho começa entendendo a empresa e termina com um site pensado para representar seu negócio de forma clara, confiável e profissional.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="mission" data-reveal>
+          <p class="kicker kicker--plain">Nossa missão</p>
+          <p class="mission-text">Dar a você a autonomia de pedir um site do seu jeito — com as suas escolhas, as suas opiniões e o seu <em>gosto.</em></p>
+          <p class="mission-note">Somos uma startup que está chegando ao mercado, e é com esse compromisso que começamos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section services" id="servicos" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker" data-reveal><span class="kicker-num">02</span>Serviços</p>
+          <h2 class="display-2" id="services-title" data-split>Tudo o que seu site precisa para <em>representar seu negócio.</em></h2>
+          <p class="section-intro" data-reveal>Cada projeto é definido a partir do que a sua empresa precisa. Estas são as frentes em que atuamos.</p>
+        </header>
+
+        <div class="services-layout">
+          <div class="services-stage" aria-hidden="true">
+            <div class="plate plate--stage">
+              <span class="plate-corner plate-corner--tl"></span>
+              <span class="plate-corner plate-corner--br"></span>
+              <div class="stage-visuals"></div>
+              <p class="stage-caption"><span class="stage-index">01</span><span class="stage-total">/ 06</span><span class="stage-name">Sites institucionais</span></p>
+            </div>
+          </div>
+
+          <ol class="services-list">
+            <li class="service is-active" data-inview>
+              <span class="service-num">01</span>
+              <div class="service-text">
+                <h3>Sites institucionais</h3>
+                <p>Sites que apresentam a empresa, seus serviços, diferenciais e formas de contato, com estrutura profissional e identidade visual personalizada.</p>
+              </div>
+              <div class="service-visual" aria-hidden="true">
+                <svg viewBox="0 0 400 300">
+                  <rect class="ln" pathLength="1" x="60" y="30" width="280" height="240" rx="6"/>
+                  <path class="ln" pathLength="1" d="M60 54h280"/>
+                  <circle class="fl fl--c" cx="80" cy="42" r="4.5"/>
+                  <g class="fl fl--soft"><rect x="246" y="40" width="22" height="4"/><rect x="274" y="40" width="22" height="4"/><rect x="302" y="40" width="22" height="4"/></g>
+                  <g class="fl fl--ink"><rect x="80" y="74" width="148" height="12"/><rect x="80" y="92" width="104" height="12"/></g>
+                  <g class="fl fl--soft"><rect x="80" y="114" width="132" height="4"/><rect x="80" y="122" width="112" height="4"/></g>
+                  <rect class="ln" pathLength="1" x="80" y="136" width="58" height="16" rx="8"/>
+                  <rect class="ln" pathLength="1" x="250" y="72" width="72" height="80"/>
+                  <circle class="ln" pathLength="1" cx="290" cy="100" r="11"/>
+                  <path class="ln" pathLength="1" d="M250 152l24-28 16 16 10-10 22 22"/>
+                  <g class="ln ln--soft"><rect pathLength="1" x="80" y="176" width="72" height="54"/><rect pathLength="1" x="164" y="176" width="72" height="54"/><rect pathLength="1" x="250" y="176" width="72" height="54"/></g>
+                  <path class="ln ln--soft" pathLength="1" d="M80 248h242"/>
+                </svg>
+              </div>
+            </li>
+            <li class="service" data-inview>
+              <span class="service-num">02</span>
+              <div class="service-text">
+                <h3>Sites para pequenos negócios</h3>
+                <p>Soluções para empresas que precisam apresentar seus produtos ou serviços, transmitir confiança e facilitar o contato com clientes.</p>
+              </div>
+              <div class="service-visual" aria-hidden="true">
+                <svg viewBox="0 0 400 300">
+                  <rect class="ln" pathLength="1" x="56" y="28" width="184" height="244" rx="6"/>
+                  <g class="fl fl--ink"><rect x="76" y="48" width="96" height="10"/></g>
+                  <circle class="ln" pathLength="1" cx="88" cy="94" r="10"/>
+                  <circle class="ln" pathLength="1" cx="88" cy="134" r="10"/>
+                  <circle class="ln" pathLength="1" cx="88" cy="174" r="10"/>
+                  <g class="fl fl--ink"><rect x="108" y="88" width="104" height="5"/><rect x="108" y="128" width="88" height="5"/><rect x="108" y="168" width="96" height="5"/></g>
+                  <g class="fl fl--soft"><rect x="108" y="97" width="72" height="3"/><rect x="108" y="137" width="80" height="3"/><rect x="108" y="177" width="64" height="3"/></g>
+                  <rect class="fl fl--c" x="76" y="214" width="120" height="26" rx="13"/>
+                  <path class="ln" pathLength="1" d="M196 227c44 0 54-30 78-44"/>
+                  <path class="ln" pathLength="1" d="M272 132h76a10 10 0 0 1 10 10v40a10 10 0 0 1-10 10h-50l-18 16v-16h-8a10 10 0 0 1-10-10v-40a10 10 0 0 1 10-10z"/>
+                  <g class="fl fl--c"><circle cx="294" cy="162" r="4"/><circle cx="310" cy="162" r="4"/><circle cx="326" cy="162" r="4"/></g>
+                </svg>
+              </div>
+            </li>
+            <li class="service" data-inview>
+              <span class="service-num">03</span>
+              <div class="service-text">
+                <h3>Catálogos digitais</h3>
+                <p>Páginas organizadas para apresentar produtos, fotografias, descrições e informações comerciais de maneira atraente e intuitiva.</p>
+              </div>
+              <div class="service-visual" aria-hidden="true">
+                <svg viewBox="0 0 400 300">
+                  <g class="ln ln--soft">
+                    <rect pathLength="1" x="56" y="34" width="88" height="110"/><rect pathLength="1" x="256" y="34" width="88" height="110"/>
+                    <rect pathLength="1" x="56" y="156" width="88" height="110"/><rect pathLength="1" x="156" y="156" width="88" height="110"/><rect pathLength="1" x="256" y="156" width="88" height="110"/>
+                  </g>
+                  <rect class="ln" pathLength="1" x="156" y="34" width="88" height="110"/>
+                  <g class="ln ln--soft">
+                    <circle pathLength="1" cx="100" cy="74" r="20"/><circle pathLength="1" cx="300" cy="74" r="20"/>
+                    <circle pathLength="1" cx="100" cy="196" r="20"/><circle pathLength="1" cx="200" cy="196" r="20"/><circle pathLength="1" cx="300" cy="196" r="20"/>
+                  </g>
+                  <circle class="ln" pathLength="1" cx="200" cy="74" r="20"/>
+                  <g class="fl fl--soft"><rect x="66" y="112" width="52" height="4"/><rect x="266" y="112" width="52" height="4"/><rect x="66" y="234" width="52" height="4"/><rect x="166" y="234" width="52" height="4"/><rect x="266" y="234" width="52" height="4"/></g>
+                  <g class="fl fl--ink"><rect x="166" y="112" width="56" height="5"/></g>
+                  <g class="fl fl--c"><rect x="166" y="124" width="26" height="5"/><rect x="66" y="246" width="20" height="4"/><rect x="166" y="246" width="20" height="4"/><rect x="266" y="246" width="20" height="4"/><rect x="66" y="124" width="20" height="4"/><rect x="266" y="124" width="20" height="4"/></g>
+                  <circle class="ln" pathLength="1" cx="232" cy="46" r="7"/>
+                  <path class="ln" pathLength="1" d="M232 42v8M228 46h8"/>
+                </svg>
+              </div>
+            </li>
+            <li class="service" data-inview>
+              <span class="service-num">04</span>
+              <div class="service-text">
+                <h3>Sites para lojas e marcas</h3>
+                <p>Experiências digitais desenvolvidas para marcas que desejam apresentar suas coleções, fortalecer sua identidade e facilitar o atendimento comercial.</p>
+              </div>
+              <div class="service-visual" aria-hidden="true">
+                <svg viewBox="0 0 400 300">
+                  <path class="fl fl--wash" d="M66 270V124a70 70 0 0 1 140 0v146z"/>
+                  <path class="ln" pathLength="1" d="M66 270V124a70 70 0 0 1 140 0v146z"/>
+                  <path class="ln ln--soft" pathLength="1" d="M136 84v186"/>
+                  <g class="fl fl--ink"><rect x="236" y="44" width="104" height="9"/></g>
+                  <g class="fl fl--soft"><rect x="236" y="60" width="66" height="3"/></g>
+                  <g class="ln ln--soft">
+                    <path pathLength="1" d="M236 196v-40a16 16 0 0 1 32 0v40z"/>
+                    <path pathLength="1" d="M276 196v-40a16 16 0 0 1 32 0v40z"/>
+                    <path pathLength="1" d="M316 196v-40a16 16 0 0 1 32 0v40z"/>
+                  </g>
+                  <g class="fl fl--ink"><rect x="236" y="220" width="78" height="8"/></g>
+                  <g class="fl fl--soft"><rect x="236" y="234" width="56" height="3"/></g>
+                  <path class="ln" pathLength="1" d="M236 256h58"/>
+                  <path class="ln" pathLength="1" d="M286 251l8 5-8 5"/>
+                </svg>
+              </div>
+            </li>
+            <li class="service" data-inview>
+              <span class="service-num">05</span>
+              <div class="service-text">
+                <h3>Design e personalização visual</h3>
+                <p>Composição de cores, tipografia, elementos gráficos, organização do conteúdo e direção visual alinhadas à identidade de cada empresa.</p>
+              </div>
+              <div class="service-visual" aria-hidden="true">
+                <svg viewBox="0 0 400 300">
+                  <circle class="fl fl--ink-solid" cx="112" cy="104" r="44"/>
+                  <circle class="ln" pathLength="1" cx="112" cy="104" r="44"/>
+                  <circle class="fl fl--c" cx="168" cy="104" r="44"/>
+                  <circle class="fl fl--ivory" cx="224" cy="104" r="44"/>
+                  <text class="sv-type" x="260" y="236">Aa</text>
+                  <path class="ln ln--soft" pathLength="1" d="M248 248h106M248 214h106"/>
+                  <path class="ln" pathLength="1" d="M62 252c40-86 92 18 150-52"/>
+                  <path class="ln ln--soft" pathLength="1" d="M62 252l22-58M212 200l-26-30"/>
+                  <g class="fl fl--c"><circle cx="84" cy="194" r="3.5"/><circle cx="186" cy="170" r="3.5"/></g>
+                  <rect class="ln" pathLength="1" x="57" y="247" width="10" height="10"/>
+                  <rect class="ln" pathLength="1" x="207" y="195" width="10" height="10"/>
+                </svg>
+              </div>
+            </li>
+            <li class="service" data-inview>
+              <span class="service-num">06</span>
+              <div class="service-text">
+                <h3>Publicação e domínio</h3>
+                <p>Orientação e implementação da publicação do site e configuração de domínio próprio, conforme o escopo contratado e os serviços disponíveis.</p>
+              </div>
+              <div class="service-visual" aria-hidden="true">
+                <svg viewBox="0 0 400 300">
+                  <circle class="ln" pathLength="1" cx="122" cy="150" r="72"/>
+                  <ellipse class="ln ln--soft" pathLength="1" cx="122" cy="150" rx="32" ry="72"/>
+                  <ellipse class="ln ln--soft" pathLength="1" cx="122" cy="150" rx="72" ry="26"/>
+                  <path class="ln ln--soft" pathLength="1" d="M50 150h144M122 78v144"/>
+                  <path class="ln" pathLength="1" d="M194 150h20"/>
+                  <rect class="ln" pathLength="1" x="214" y="130" width="150" height="40" rx="20"/>
+                  <path class="ln" pathLength="1" d="M233 149v-4a5 5 0 0 1 10 0v4M231 149h14v10h-14z"/>
+                  <text class="sv-url" x="254" y="155">seunegocio.com.br</text>
+                  <circle class="ln" pathLength="1" cx="336" cy="220" r="16"/>
+                  <path class="ln" pathLength="1" d="M328 220l6 6 10-12"/>
+                  <path class="ln ln--soft" pathLength="1" d="M336 170v34"/>
+                </svg>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="services-cta" data-reveal>
+          <p class="services-cta-title">Vamos encontrar a solução ideal para <em>sua empresa.</em></p>
+          <a class="btn" href="mailto:getyourautonome@gmail.com" data-contact>
+            <span class="btn-label">Conversar sobre meu projeto</span>
+            <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <div class="tone-wrap">
+      <section class="section section--dark diffs" id="diferenciais" aria-labelledby="diffs-title" data-enter>
+        <div class="container">
+          <header class="section-head section-head--split">
+            <div>
+              <p class="kicker" data-reveal><span class="kicker-num">03</span>Diferenciais</p>
+              <h2 class="display-2" id="diffs-title" data-split>Não é <em>apenas</em> colocar sua empresa na internet.</h2>
+            </div>
+            <p class="section-intro" data-reveal>É apresentar o seu negócio com clareza, cuidado e intenção — do primeiro acesso até o momento em que o cliente decide falar com você.</p>
+          </header>
+
+          <ul class="diff-grid" data-stagger data-spotlight>
+            <li class="diff" data-reveal>
+              <svg class="diff-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26C9 14 21 20 27 6"/><path d="M5 26l6-9M27 6l-9 2"/><rect x="3" y="24" width="4" height="4"/><rect x="25" y="4" width="4" height="4"/></svg>
+              <span class="diff-num">01</span>
+              <h3>Design pensado para cada negócio</h3>
+              <p>A identidade visual e a estrutura do site respeitam as características da empresa, em vez de reproduzir um modelo genérico.</p>
+            </li>
+            <li class="diff" data-reveal>
+              <svg class="diff-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="2.5"/><path d="M16 2v6M16 24v6M2 16h6M24 16h6"/></svg>
+              <span class="diff-num">02</span>
+              <h3>Clareza desde o primeiro acesso</h3>
+              <p>Informações organizadas para que o visitante compreenda o que a empresa oferece e saiba como entrar em contato.</p>
+            </li>
+            <li class="diff" data-reveal>
+              <svg class="diff-icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="1.5"/><path d="M8 25h8M12 20v5"/><rect x="21" y="11" width="9" height="16" rx="1.5"/><path d="M24.5 24h2"/></svg>
+              <span class="diff-num">03</span>
+              <h3>Experiência em diferentes telas</h3>
+              <p>Layout responsivo para celulares, tablets e computadores.</p>
+            </li>
+            <li class="diff" data-reveal>
+              <svg class="diff-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 5h20a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H14l-7 5v-5H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z"/><path d="M10 12h12M10 16h8"/></svg>
+              <span class="diff-num">04</span>
+              <h3>Atendimento direto</h3>
+              <p>Comunicação pelo WhatsApp para facilitar o alinhamento das necessidades do projeto.</p>
+            </li>
+            <li class="diff" data-reveal>
+              <svg class="diff-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27h7v-7h7v-7h7V6h5"/><circle cx="10" cy="20" r="1.5"/><circle cx="17" cy="13" r="1.5"/><circle cx="24" cy="6" r="1.5"/></svg>
+              <span class="diff-num">05</span>
+              <h3>Processo estruturado</h3>
+              <p>Briefing, definição da estrutura, desenvolvimento, revisão e publicação conforme o escopo acordado.</p>
+            </li>
+            <li class="diff" data-reveal>
+              <svg class="diff-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 9l-7 7 7 7M21 9l7 7-7 7M18.5 6l-5 20"/></svg>
+              <span class="diff-num">06</span>
+              <h3>Tecnologia com propósito</h3>
+              <p>Ferramentas modernas para produzir sites eficientes, com atenção à qualidade visual, à usabilidade e ao desempenho.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- PROCESSO -->
+    <section class="section process" id="processo" aria-labelledby="process-title">
+      <div class="container process-layout">
+        <header class="process-head">
+          <p class="kicker" data-reveal><span class="kicker-num">04</span>Nosso processo</p>
+          <h2 class="display-2" id="process-title" data-split>Do primeiro contato <em>à publicação.</em></h2>
+          <p class="section-intro" data-reveal>Cada projeto tem o seu ritmo, e os prazos são definidos de acordo com o escopo. O caminho, porém, é sempre claro.</p>
+          <p class="process-status" aria-hidden="true"><span class="process-status-label">Etapa</span> <span class="process-status-num" data-step-current>01</span> <span class="process-status-total">/ 05</span></p>
+        </header>
+
+        <div class="process-track">
+          <div class="rack" aria-hidden="true"><span class="rack-fill"></span></div>
+          <svg class="pinion" viewBox="372.5 160.3 230 230" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M484 389.5C474.5 388.6 472 388.3 467.6 387.6C462.1 386.8 461.3 386.6 461 386C460.7 385.5 460.1 377.3 459.8 368.5C459.4 361 459 356.5 458.6 355.7C458.4 355.3 457.8 354.8 456.9 354.5C455.2 353.7 447.8 350 446 349C444.6 348.2 444 348.1 443.2 348.5C442.5 348.9 438.6 351.8 431.1 357.6C425.1 362.3 420.4 365.6 419.5 366C419.1 366.1 418.6 366.1 418.2 365.9C416.1 365 400.8 349.7 396.8 344.4C395.9 343.2 396.1 342.6 398.2 339.7C399.2 338.2 401.2 335.5 402.6 333.6C404 331.7 406.8 328 408.8 325.3C410.8 322.6 412.6 320 412.9 319.6C413.9 318.2 413.9 317.6 412.7 315.2C411.2 312.1 409.5 308.3 408.8 306.4C407.3 302.2 407.6 302.4 400.8 302C398.1 301.9 393.4 301.6 390.4 301.4C387.4 301.2 383.3 300.9 381.4 300.8C377.6 300.7 376.6 300.4 376.4 299.4C376.2 298.8 375.4 290.9 375.1 288.2C375.1 287.2 374.8 283.6 374.5 280.1C373.8 271.9 373.8 268 374.5 267.4C374.7 267.2 376.4 266.7 378.3 266.3C392.1 263.3 403.3 260.3 403.9 259.4C404.1 259.1 404.7 257 405.2 254.8C405.8 252.5 406.6 249.5 407.1 248.1C407.6 246.7 408 245.2 408 244.8C408 243.8 406.9 242.5 403 238.8C401.3 237.2 398.8 234.8 397.5 233.4C396.2 232 393.3 229 391.1 226.7C388.8 224.3 386.9 222.2 386.9 221.9C386.6 221 387 220.3 389 217.5C389.9 216.2 392 213.3 393.6 211C400.4 201.3 404.9 195.6 405.8 195.4C406.2 195.3 409.9 197 419.8 202C430.8 207.6 433.4 208.7 433.9 208.6C434.3 208.5 436.4 207.3 438.5 205.9C440.6 204.5 443.4 202.7 444.6 201.9C446.1 200.9 446.8 200.3 446.9 199.9C447.1 199.2 446.6 193.3 445.7 185C445.5 182.5 445.1 178.7 445 176.6C444.9 174.6 444.7 172.3 444.6 171.6C444.4 169.5 444.7 169.3 450.8 167.7C456.1 166.2 461.7 164.9 468.4 163.4C470.6 162.9 473.2 162.3 474.2 162.1C477.3 161.4 477.1 161.2 481.7 172.8C485.4 182 488.4 188.8 489.1 189.4C489.8 190 490.5 190.1 495.1 190.5C496.7 190.6 499.3 191 501 191.3C502.6 191.6 504.2 191.8 504.6 191.7C505.8 191.3 506.9 190.1 511 183.8C516.3 175.7 521.9 167.8 522.8 167.2C523.5 166.6 523.5 166.6 524.8 167.1C526.2 167.6 530 169.2 532.9 170.5C533.8 170.9 535.8 171.8 537.1 172.4C539.3 173.3 542.8 175.1 549.4 178.8C553.1 180.8 553.3 181.3 552 185C551.6 186.2 549.9 191.8 548.1 197.5C546.4 203.2 544.9 208.2 544.7 208.6C544.4 209.5 544.4 210.7 544.7 211.2C545.2 212.1 554.2 221 554.8 221.1C555.6 221.3 558.4 220.7 564.5 218.9C567 218.1 571.4 216.9 574.2 216.1C577.1 215.3 580 214.5 580.9 214.2C583.2 213.5 583.9 213.6 584.8 214.8C586.4 217.1 595.1 236.2 596.8 241.4L597.3 243L596.8 243.7C596.6 244.1 592.5 246.8 587.8 249.9C583.1 252.9 578.4 256.1 577.3 256.9C576.1 257.7 574.5 258.9 573.7 259.5C571.7 260.9 571.6 261.3 572 263.7C572.1 264.8 572.4 267.9 572.5 270.6C572.7 273.4 572.9 275.9 573 276.2C573.3 277 574.9 277.9 581.1 280.6C584.3 282 587.3 283.4 587.8 283.6C588.2 283.9 589.5 284.4 590.6 284.9C599.8 288.6 601.2 289.4 600.9 290.6C600.9 290.9 600.3 293.6 599.6 296.6C597.5 306.5 595.8 312.9 593.1 320.5C592.5 322 592.1 322.1 588.8 321.7C586.4 321.3 579.3 320.4 573.8 319.7C572.6 319.6 570.9 319.4 570.1 319.2C569.2 319.1 567.2 318.9 565.5 318.8C561.5 318.4 561.2 318.5 559.7 321.3C559 322.5 557.9 324.3 557.1 325.4C554.5 328.9 553.2 331 553.2 331.9C553.2 332.4 553.7 333.6 554.3 334.8C554.8 335.9 556.3 339.1 557.6 341.9C559 344.8 560.8 348.6 561.8 350.5C564.3 355.6 565.8 358.9 565.8 359.7C565.8 360.6 564.9 361.4 559.6 365.3C551.8 371.1 540.2 378.5 539.1 378.5C538.4 378.5 535.1 375.1 528.4 367.5C521.2 359.5 517.5 355.8 516.7 355.8C516.3 355.8 514.8 356.1 513.2 356.6C511.7 357.1 508.7 357.9 506.5 358.3C501.7 359.2 501.1 359.5 500.7 361.3C500.5 362 499.8 364.3 499.3 366.2C498.2 370.4 496.6 376.5 494.8 384C494.1 386.8 493.3 389.3 493.1 389.5C492.6 390.1 490.4 390.1 484 389.5ZM495.8 316.6C503.4 315.2 511 311.1 516.4 305.7C522.7 299.2 525.5 294.5 527.6 286.2C528.8 281.4 529.1 279.1 528.9 274.1C528.7 267 527.1 260.9 523.8 255C521.7 251.1 516 244.9 511.6 241.7C504.4 236.3 493.5 233.3 484.3 234.2C470.8 235.5 460.4 241.8 452.8 253C448 260 445.9 268.9 446.5 278.9C447.1 288.1 450.3 295.6 457.1 303.4C463.8 311.1 471.8 315.3 483.4 317.1C485.1 317.4 493.7 317 495.8 316.6Z"/></svg>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-node" aria-hidden="true"></span>
+              <p class="step-num">Etapa 01</p>
+              <h3>Conversa inicial</h3>
+              <p>Entendemos o negócio, os objetivos, o público e as necessidades do cliente.</p>
+            </li>
+            <li class="step">
+              <span class="step-node" aria-hidden="true"></span>
+              <p class="step-num">Etapa 02</p>
+              <h3>Briefing e planejamento</h3>
+              <p>Organizamos as informações, referências visuais, conteúdos e a estrutura do site.</p>
+            </li>
+            <li class="step">
+              <span class="step-node" aria-hidden="true"></span>
+              <p class="step-num">Etapa 03</p>
+              <h3>Design e desenvolvimento</h3>
+              <p>Construímos a experiência visual e implementamos as funcionalidades previstas no projeto.</p>
+            </li>
+            <li class="step">
+              <span class="step-node" aria-hidden="true"></span>
+              <p class="step-num">Etapa 04</p>
+              <h3>Revisão</h3>
+              <p>O cliente avalia o resultado e solicita os ajustes previstos no escopo contratado.</p>
+            </li>
+            <li class="step">
+              <span class="step-node" aria-hidden="true"></span>
+              <p class="step-num">Etapa 05</p>
+              <h3>Publicação</h3>
+              <p>Preparamos o site para publicação e configuramos o domínio e os recursos contratados.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section work" id="projetos" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="kicker" data-reveal><span class="kicker-num">05</span>Projetos</p>
+            <h2 class="display-2" id="work-title" data-split>Projetos pensados para <em>cada negócio.</em></h2>
+          </div>
+          <div class="work-intro" data-reveal>
+            <p class="section-intro">Nosso portfólio de clientes está começando. Enquanto ele cresce, apresentamos estudos conceituais criados pela autonoME para mostrar como cada negócio pode ganhar uma identidade própria.</p>
+            <p class="notice">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4"/></svg>
+              Conceitos demonstrativos: não representam clientes reais nem sites publicados.
+            </p>
+          </div>
+        </header>
+
+        <!-- Para publicar um projeto real: copie um .work-item, troque o .mock por <img src="..." alt="..."> e use "Projeto publicado" no lugar de "Conceito demonstrativo". -->
+        <div class="work-grid">
+          <article class="work-item work-item--a" data-reveal>
+            <div class="mock-frame" data-tilt="2.5">
+              <div class="mock mock--bakery" aria-hidden="true">
+                <div class="mock-bar"><span class="mock-dot"></span><span class="mock-url">conceito / padaria artesanal</span></div>
+                <div class="mock-page">
+                  <div class="mk-nav"><span class="mk-logo">Padaria <i>artesanal</i></span><span class="mk-links"><i></i><i></i><i></i></span></div>
+                  <div class="mk-hero">
+                    <div class="mk-copy">
+                      <p class="mk-eyebrow">Fermentação natural</p>
+                      <p class="mk-title">Pão feito com tempo, <i>todos os dias.</i></p>
+                      <span class="mk-btn">Ver cardápio</span>
+                    </div>
+                    <div class="mk-loaf"><span class="loaf"></span><span class="loaf-cut"></span><span class="loaf-cut"></span><span class="loaf-cut"></span></div>
+                  </div>
+                  <div class="mk-row"><span><b></b>Pão italiano</span><span><b></b>Focaccia</span><span><b></b>Brioche</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-meta">
+              <p class="work-tag">Conceito demonstrativo · 01</p>
+              <h3>Padaria artesanal</h3>
+              <p class="work-seg">Alimentação · catálogo de produtos</p>
+              <p>Objetivo: apresentar os produtos do dia com fotos e descrições e levar o cliente direto ao pedido.</p>
+            </div>
+          </article>
+
+          <article class="work-item work-item--b" data-reveal>
+            <div class="mock-frame" data-tilt="2.5">
+              <div class="mock mock--atelier" aria-hidden="true">
+                <div class="mock-bar"><span class="mock-dot"></span><span class="mock-url">conceito / ateliê de moda</span></div>
+                <div class="mock-page">
+                  <div class="mk-nav"><span class="mk-logo">ATELIÊ</span><span class="mk-links"><i></i><i></i></span></div>
+                  <div class="mk-arch"></div>
+                  <p class="mk-title">Coleção <i>Outono</i></p>
+                  <div class="mk-thumbs"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-meta">
+              <p class="work-tag">Conceito demonstrativo · 02</p>
+              <h3>Ateliê de moda autoral</h3>
+              <p class="work-seg">Moda · loja e marca</p>
+              <p>Objetivo: valorizar a identidade da marca e apresentar coleções com linguagem editorial.</p>
+            </div>
+          </article>
+
+          <article class="work-item work-item--c" data-reveal>
+            <div class="mock-frame" data-tilt="2.5">
+              <div class="mock mock--clinic" aria-hidden="true">
+                <div class="mock-bar"><span class="mock-dot"></span><span class="mock-url">conceito / clínica de fisioterapia</span></div>
+                <div class="mock-page">
+                  <div class="mk-nav"><span class="mk-logo"><b></b>Fisioterapia</span><span class="mk-links"><i></i><i></i><i></i></span><span class="mk-btn mk-btn--sm">Agendar</span></div>
+                  <div class="mk-hero">
+                    <div class="mk-copy">
+                      <p class="mk-title">Movimento, com <i>cuidado.</i></p>
+                      <p class="mk-text"></p>
+                      <span class="mk-btn">Agendar avaliação</span>
+                    </div>
+                    <div class="mk-orbit"><span></span><span></span><span></span></div>
+                  </div>
+                  <div class="mk-cards"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-meta">
+              <p class="work-tag">Conceito demonstrativo · 03</p>
+              <h3>Clínica de fisioterapia</h3>
+              <p class="work-seg">Saúde · prestação de serviços</p>
+              <p>Objetivo: transmitir confiança, explicar os atendimentos e conduzir o paciente ao agendamento.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="work-next" data-reveal>
+          <p>O primeiro projeto publicado nesta seção pode ser o seu.</p>
+          <a class="link-arrow" href="mailto:getyourautonome@gmail.com" data-contact>Começar meu projeto<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONVERSÃO -->
+    <div class="tone-wrap">
+      <section class="section section--dark cta-final" id="contato" aria-labelledby="cta-title" data-enter data-spotlight>
+        <svg class="cta-dial" viewBox="-300 -300 600 600" aria-hidden="true" focusable="false">
+          <circle r="296"/><circle r="236" class="dial-dash"/><circle r="170"/>
+          <g class="dial-ticks"></g>
+        </svg>
+        <div class="container cta-grid">
+          <div class="cta-copy">
+            <p class="kicker kicker--plain" data-reveal>Contato</p>
+            <h2 class="display-cta" id="cta-title" data-split>Seu próximo passo começa com uma <em>boa presença digital.</em></h2>
+          </div>
+          <div class="cta-side" data-stagger>
+            <p data-reveal>Conte um pouco sobre sua empresa. Vamos entender o que você precisa e conversar sobre a melhor solução para o seu negócio.</p>
+            <div data-reveal>
+              <a class="btn btn--champagne btn--lg" href="mailto:getyourautonome@gmail.com" data-contact data-magnetic="0.18">
+                <span class="btn-label">Conversar com a autonoME</span>
+                <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+              </a>
+              <p class="cta-hint" data-contact-hint>Abre o seu aplicativo de e-mail com uma mensagem pronta.</p>
+            </div>
+            <ul class="channels" data-reveal>
+              <li data-channel="whatsapp" hidden>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+                <a href="#" data-contact>WhatsApp</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M3 5l7 6 7-6"/></svg>
+                <a href="mailto:getyourautonome@gmail.com">getyourautonome@gmail.com</a>
+              </li>
+              <li data-channel="instagram" hidden>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="4"/><circle cx="10" cy="10" r="3.2"/><circle cx="14.2" cy="5.8" r=".6"/></svg>
+                <a href="#" data-instagram target="_blank" rel="noopener noreferrer">Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <header class="faq-head">
+          <p class="kicker" data-reveal><span class="kicker-num">06</span>Dúvidas</p>
+          <h2 class="display-2" id="faq-title" data-split>Perguntas <em>frequentes.</em></h2>
+          <p class="section-intro" data-reveal>Não encontrou o que procurava? <a class="inline-link" href="mailto:getyourautonome@gmail.com" data-contact>Fale com a autonoME</a>.</p>
+        </header>
+
+        <div class="accordion" data-reveal>
+          <div class="acc-item">
+            <h3 class="acc-heading"><button class="acc-trigger" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1"><span class="acc-num">01</span><span class="acc-q">Para quais tipos de empresas vocês criam sites?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-a1" role="region" aria-labelledby="faq-q1"><div class="acc-inner"><p>Para pequenas empresas, comércios, lojas, marcas e prestadores de serviços que querem apresentar o negócio de forma profissional na internet. Se você não tem certeza de que o seu caso se encaixa, converse com a gente: avaliamos cada pedido.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="acc-heading"><button class="acc-trigger" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2"><span class="acc-num">02</span><span class="acc-q">Como funciona o processo de criação?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="acc-inner"><p>Começamos com uma conversa para entender o seu negócio. Em seguida organizamos o briefing e a estrutura do site, desenvolvemos o design, você revisa o resultado e, por fim, publicamos. As cinco etapas estão detalhadas em <a class="inline-link" href="#processo">Nosso processo</a>.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="acc-heading"><button class="acc-trigger" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3"><span class="acc-num">03</span><span class="acc-q">Posso solicitar um site com identidade visual personalizada?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-a3" role="region" aria-labelledby="faq-q3"><div class="acc-inner"><p>Sim, esse é o centro do nosso trabalho. Cores, tipografia, elementos gráficos e organização do conteúdo são definidos a partir da identidade da sua empresa e das suas preferências. Se você já tem uma marca, partimos dela.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="acc-heading"><button class="acc-trigger" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4"><span class="acc-num">04</span><span class="acc-q">É possível utilizar meu próprio domínio?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-a4" role="region" aria-labelledby="faq-q4"><div class="acc-inner"><p>Sim. A publicação e a configuração de domínio próprio (por exemplo, suaempresa.com.br) fazem parte dos nossos serviços, conforme o escopo contratado. Na conversa inicial explicamos o que é necessário, seja para registrar um domínio novo ou para usar um que você já tenha.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="acc-heading"><button class="acc-trigger" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5"><span class="acc-num">05</span><span class="acc-q">O site funciona em celulares?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-a5" role="region" aria-labelledby="faq-q5"><div class="acc-inner"><p>Sim. Os sites são desenvolvidos com layout responsivo, que se adapta a celulares, tablets e computadores.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="acc-heading"><button class="acc-trigger" type="button" id="faq-q6" aria-expanded="false" aria-controls="faq-a6"><span class="acc-num">06</span><span class="acc-q">Como funciona a manutenção após a publicação?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-a6" role="region" aria-labelledby="faq-q6"><div class="acc-inner"><p>A manutenção não está incluída automaticamente em todos os projetos. Ajustes, atualizações de conteúdo e suporte depois da publicação podem ser combinados conforme a necessidade da sua empresa e definidos no escopo.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="acc-heading"><button class="acc-trigger" type="button" id="faq-q7" aria-expanded="false" aria-controls="faq-a7"><span class="acc-num">07</span><span class="acc-q">Quanto custa criar um site?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-a7" role="region" aria-labelledby="faq-q7"><div class="acc-inner"><p>O valor depende do escopo: quantidade de páginas, tipo de conteúdo, recursos necessários e serviços de publicação, domínio e hospedagem envolvidos. Depois de entender o que você precisa, apresentamos um orçamento de acordo com o projeto.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3 class="acc-heading"><button class="acc-trigger" type="button" id="faq-q8" aria-expanded="false" aria-controls="faq-a8"><span class="acc-num">08</span><span class="acc-q">Como faço para solicitar um orçamento?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-a8" role="region" aria-labelledby="faq-q8"><div class="acc-inner"><p>Use o botão <a class="inline-link" href="mailto:getyourautonome@gmail.com" data-contact>Solicitar um orçamento</a> e conte um pouco sobre sua empresa e o que você precisa. Se preferir, escreva para <a class="inline-link" href="mailto:getyourautonome@gmail.com">getyourautonome@gmail.com</a>.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="footer-logo" href="#inicio" aria-label="autonoME — voltar ao início"><img src="assets/logo-on-dark.svg" alt="autonoME" width="176" height="84" loading="lazy"></a>
+          <p>Sites profissionais e personalizados para pequenas empresas, comércios, lojas e prestadores de serviços.</p>
+        </div>
+        <nav class="footer-col" aria-label="Rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#processo">Nosso processo</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h2 class="footer-title">Contato</h2>
+          <ul>
+            <li data-channel="whatsapp" hidden><a href="#" data-contact>WhatsApp</a></li>
+            <li><a href="mailto:getyourautonome@gmail.com">getyourautonome@gmail.com</a></li>
+            <li data-channel="instagram" hidden><a href="#" data-instagram target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:getyourautonome@gmail.com" data-contact>Solicitar um orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-docs hidden>
+          <h2 class="footer-title">Documentos</h2>
+          <ul>
+            <li data-doc="privacy" hidden><a href="#">Política de privacidade</a></li>
+            <li data-doc="terms" hidden><a href="#">Termos de uso</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> autonoME. Todos os direitos reservados.</p>
+        <a class="to-top" href="#inicio">Voltar ao topo<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="motion.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

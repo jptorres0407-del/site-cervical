@@ -1,0 +1,75 @@
+/* premium-motion — kit de movimento (assets/motion.css)
+   Ativado por <html class="motion-ready">, que o motion.js adiciona: sem JS, nada fica escondido.
+   Só anima transform e opacity. Catálogo e regras: references/motion-patterns.md */
+
+:root {
+  --motion-fast: 160ms;
+  --motion-base: 280ms;
+  --motion-slow: 760ms;
+  --motion-stagger: 80ms;
+  --motion-distance: 24px;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+}
+
+/* Reveal ao entrar na viewport: data-reveal="" | fade | scale | left | right */
+.motion-ready [data-reveal] {
+  opacity: 0;
+  transform: var(--reveal-from, translate3d(0, var(--motion-distance), 0));
+  transition: opacity var(--motion-slow) var(--ease-out), transform var(--motion-slow) var(--ease-out);
+  transition-delay: calc(var(--i, 0) * var(--motion-stagger));
+}
+.motion-ready [data-reveal="fade"] { --reveal-from: none; }
+.motion-ready [data-reveal="scale"] { --reveal-from: scale(.94); }
+.motion-ready [data-reveal="left"] { --reveal-from: translate3d(calc(var(--motion-distance) * -1.5), 0, 0); }
+.motion-ready [data-reveal="right"] { --reveal-from: translate3d(calc(var(--motion-distance) * 1.5), 0, 0); }
+.motion-ready [data-reveal].is-inview { opacity: 1; transform: none; }
+
+/* Títulos palavra a palavra: data-split (só em títulos curtos) */
+.split-word { display: inline-block; overflow: hidden; vertical-align: top; padding: .16em .08em .16em 0; margin: -.16em -.08em -.16em 0; }
+.split-word > span { display: inline-block; }
+.motion-ready [data-split] .split-word > span {
+  transform: translate3d(0, 110%, 0);
+  transition: transform 900ms var(--ease-out);
+  transition-delay: calc(var(--w, 0) * 55ms + var(--split-delay, 0ms));
+}
+.motion-ready [data-split].is-inview .split-word > span { transform: none; }
+
+/* Luz que segue o cursor: data-spotlight */
+[data-spotlight] { position: relative; isolation: isolate; }
+[data-spotlight]::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+  opacity: 0; transition: opacity var(--motion-base) var(--ease-out);
+  background: radial-gradient(var(--spotlight-size, 360px) circle at var(--mx, 50%) var(--my, 50%), var(--spotlight-color, rgba(255, 255, 255, .08)), transparent 65%);
+}
+[data-spotlight].is-lit::after { opacity: 1; }
+
+/* Inclinação 3D: data-tilt="graus" (usa transform; não combine com data-reveal no mesmo elemento após o reveal) */
+[data-tilt] { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform var(--motion-base) var(--ease-out); }
+[data-tilt].is-tilting { transition-duration: 80ms; }
+
+/* Botão magnético: data-magnetic="força" (usa a propriedade translate, compõe com transform) */
+[data-magnetic] { translate: var(--mgx, 0) var(--mgy, 0); transition: translate var(--motion-base) var(--ease-spring); }
+
+/* Barra de progresso da página: data-page-progress (lê --progress 0..1) */
+[data-page-progress] { transform-origin: 0 50%; transform: scaleX(var(--progress, 0)); }
+
+/* Faixa em movimento contínuo: data-marquee + botão data-marquee-toggle aria-controls */
+[data-marquee] { overflow: hidden; }
+[data-marquee] .marquee-track { display: flex; width: max-content; animation: motion-marquee var(--marquee-duration, 40s) linear infinite; }
+[data-marquee].is-paused .marquee-track { animation-play-state: paused; }
+@keyframes motion-marquee { to { transform: translate3d(-50%, 0, 0); } }
+
+/* Ocultar o header ao rolar para baixo: data-hide-on-scroll */
+[data-hide-on-scroll] { transition: transform var(--motion-base) var(--ease-out); }
+[data-hide-on-scroll].is-hidden { transform: translate3d(0, -100%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .motion-ready [data-split] .split-word > span { transform: none; transition: none; }
+  [data-marquee] .marquee-track { animation: none; }
+  [data-tilt] { transform: none; }
+  [data-magnetic] { translate: none; }
+  [data-hide-on-scroll].is-hidden { transform: none; }
+}
