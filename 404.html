@@ -5,26 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Página não encontrada — autonoME</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#F7F5F0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="theme-color" content="#E7E6E3">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..700&family=Sorts+Mill+Goudy:ital@0;1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..600&family=Geist+Mono:wght@400..500&family=Syne:wght@500..800&display=swap">
   <link rel="stylesheet" href="/motion.css">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="not-found">
-  <main class="container not-found-inner">
-    <a class="brand" href="/" aria-label="autonoME — página inicial"><img src="/assets/logo.svg" alt="autonoME" width="134" height="64"></a>
-    <p class="kicker"><span class="kicker-num">404</span>Página não encontrada</p>
-    <h1 class="display-2">Este endereço não leva a <em>nenhuma página.</em></h1>
-    <p class="section-intro">O link pode ter mudado ou estar incompleto. Volte para o início para conhecer a autonoME.</p>
-    <a class="btn" href="/">
-      <span class="btn-label">Ir para o início</span>
-      <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-    </a>
+  <div class="smoke" aria-hidden="true"><span></span><span></span><span></span></div>
+  <main class="container">
+    <div class="not-found-inner">
+      <a class="brand" href="/" aria-label="autonoME — página inicial"><img src="/assets/logo.svg" alt="autonoME" width="117" height="56"></a>
+      <p class="label"><span class="label-num">404</span>Página não encontrada</p>
+      <h1 class="title">Esse endereço não <span class="hl">leva a lugar nenhum.</span></h1>
+      <a class="btn btn--lg" href="/">
+        <span class="btn-label">Voltar ao início</span>
+        <span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </a>
+    </div>
   </main>
 </body>
 </html>
